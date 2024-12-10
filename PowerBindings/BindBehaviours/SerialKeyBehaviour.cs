@@ -5,7 +5,10 @@ using System.Reactive.Disposables;
 
 namespace PowerBindings.BindBehaviours;
 
-internal sealed class SerialKeyBehaviour : IKeyBindBehaviour
+/// <summary>
+/// Execute one action at a time
+/// </summary>
+public sealed class SerialKeyBehaviour : IKeyBindBehaviour
 {
    public static SerialKeyBehaviour Instance { get; } = new();
 

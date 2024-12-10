@@ -3,7 +3,13 @@ using System.Reactive.Disposables;
 
 namespace PowerBindings.BindBehaviours;
 
-internal sealed class SwitchKeyBehaviour(HookKey Key, IKeyBindBehaviour behaviour1, IKeyBindBehaviour behaviour2)
+/// <summary>
+/// Switch between different behaviours with another key
+/// </summary>
+/// <param name="Key">Switch Key</param>
+/// <param name="behaviour1">Initial Behaviour</param>
+/// <param name="behaviour2">Secondary Behaviour</param>
+public sealed class SwitchKeyBehaviour(HookKey Key, IKeyBindBehaviour behaviour1, IKeyBindBehaviour behaviour2)
    : IKeyBindBehaviour
 {
    public SwitchKeyBehaviour(HookKey key, HookKey switchKey, IKeyBindBehaviour behaviour1, IKeyBindBehaviour behaviour2)

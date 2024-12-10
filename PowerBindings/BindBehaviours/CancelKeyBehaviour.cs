@@ -3,15 +3,20 @@ using System.Reactive.Disposables;
 
 namespace PowerBindings.BindBehaviours;
 
-internal sealed class CancelKeyBehaviour(HookKey cancelKey, IKeyBindBehaviour behaviour)
+/// <summary>
+/// Cancel action while performing it
+/// </summary>
+/// <param name="cancelKey">Cancel Key</param>
+/// <param name="behaviour">Behaviour</param>
+public sealed class CancelKeyBehaviour(HookKey cancelKey, IKeyBindBehaviour behaviour)
    : IKeyBindBehaviour
 {
-   internal CancelKeyBehaviour(HookKey cancelKey)
+   public CancelKeyBehaviour(HookKey cancelKey)
       : this(cancelKey, SingleKeyBehaviour.Instance)
    {
    }
 
-   internal CancelKeyBehaviour(HookKey key, HookKey cancelKey)
+   public CancelKeyBehaviour(HookKey key, HookKey cancelKey)
       : this(cancelKey, new FilterKeyBehaviour(key, SingleKeyBehaviour.Instance))
    {
    }

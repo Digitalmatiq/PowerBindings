@@ -5,7 +5,10 @@ using System.Reactive.Disposables;
 
 namespace PowerBindings.BindBehaviours;
 
-internal sealed class ParallelKeyBehaviour : IKeyBindBehaviour
+/// <summary>
+/// Execute multiple actions at a time
+/// </summary>
+public sealed class ParallelKeyBehaviour : IKeyBindBehaviour
 {
    public static ParallelKeyBehaviour Instance { get; } = new();
 

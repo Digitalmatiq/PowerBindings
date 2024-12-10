@@ -5,7 +5,10 @@ using System.Reactive.Disposables;
 
 namespace PowerBindings.BindBehaviours;
 
-internal sealed class SingleKeyBehaviour : IKeyBindBehaviour
+/// <summary>
+/// Execute one action at a time and await it until scheduling another
+/// </summary>
+public sealed class SingleKeyBehaviour : IKeyBindBehaviour
 {
    public static SingleKeyBehaviour Instance { get; } = new();
 

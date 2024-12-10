@@ -2,10 +2,15 @@
 
 namespace PowerBindings.BindBehaviours;
 
-internal sealed class FilterKeyBehaviour(HookKey key, IKeyBindBehaviour behaviour)
+/// <summary>
+/// Trigger actions only if filtering condition is met
+/// </summary>
+/// <param name="key">Filtering key</param>
+/// <param name="behaviour">Behaviour</param>
+public sealed class FilterKeyBehaviour(HookKey key, IKeyBindBehaviour behaviour)
    : IKeyBindBehaviour
 {
-   internal FilterKeyBehaviour(HookKey key)
+   public FilterKeyBehaviour(HookKey key)
       : this(key, SingleKeyBehaviour.Instance)
    {
    }
