@@ -40,4 +40,4 @@ public class Program
 
 ## Other behaviours
 
-- The library offers also some other behaviours to choose from like: ICancelFilterKeyTrait, IParallelFilterKeyTrait, ISerialFilterKeyTrait, ISingleFilterKeyTrait, ISwitchKeyTrait
+- The library offers also some other behaviours to choose from like: `ICancelFilterKeyTrait`, `IParallelFilterKeyTrait`, `ISerialFilterKeyTrait`, `ISingleFilterKeyTrait`, `ISwitchKeyTrait`
